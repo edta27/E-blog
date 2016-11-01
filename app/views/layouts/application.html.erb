@@ -11,6 +11,7 @@
 </head>
 <body>
   <div id="sidebar">
+
     <div id="logo">
       <%= link_to root_path do %>
 
@@ -29,7 +30,7 @@
       <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
     <% end %>
   </div>
- <div id="page_wrapper">
+
   <div id="main_content">
     <div id="header">
       <!-- show current page if all posts when signed in -->
@@ -56,6 +57,6 @@
 
     <%= yield %>
   </div>
-</div>
+
 </body>
 </html>
