@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolink
+  -track' => true %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' =>true%>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <div id="sidebar">
+    <div id="logo">
+     <%= link_to root_path do %>
+       <%= image_tag "logo.svg" %>
+      <% end %>
+    </div>
+
+   <ul>
+     <li class="category">Website</li>
+     <li><%= link_to "Blog", root_path %></li>
+     <li>About</li>
+   </ul>
+
+
+   </div>
+
+
+
+
+   <%= yield %>
+</body>
+</html>
