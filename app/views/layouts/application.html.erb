@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,20 +18,21 @@
     </div>
 
     <ul>
-      <li class="category">Website</li>
+      <li class="category">E</li>
       <li><%= link_to "Blog", root_path %></li>
       <li><%= link_to "About", about_path %></li>
     </ul>
 
 
-
+   <!-- dont show signed in admin when login -->
     <% if !user_signed_in? %>
       <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
     <% end %>
   </div>
-
+ <div id="page_wrapper">
   <div id="main_content">
     <div id="header">
+      <!-- show current page if all posts when signed in -->
       <% if current_page?(root_path) %>
         <p>All Posts</p>
       <% elsif current_page?(about_path) %>
@@ -39,10 +41,11 @@
         <%= link_to "Back to All Posts", root_path %>
       <% end %>
 
+      <!-- do not show sign in if signed in -->
       <% if user_signed_in? %>
         <div class="buttons">
           <button class="button"><%= link_to "New Post", new_post_path %></button>
-          <button class="button">Log Out</button>
+          <button class="button"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
         </div>
       <% end %>
     </div>
@@ -53,5 +56,6 @@
 
     <%= yield %>
   </div>
+</div>
 </body>
 </html>
