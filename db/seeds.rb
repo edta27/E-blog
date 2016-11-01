@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Scientist.destroy_all
+Post.destroy_all
 
 posts = Post.create([
   {title: "First post" , body: "Migas venmo health goth organic fashion axe street art. Direct trade air plant freegan, farm-to-table mlkshk fap gastropub. Single-origin coffee roof party microdosing meh tbh kale chips, try-hard fashion axe 3 wolf moon tattooed tumblr ramps twee. Godard before they sold out echo park, prism vexillologist tote bag literally pabst. Vaporware fashion axe chambray gochujang fingerstache hexagon meggings, brooklyn copper mug paleo freegan chillwave. Jianbing chicharrones yuccie gentrify man braid portland, gastropub readymade tumeric unicorn stumptown retro fingerstache offal mustache. Meditation blue bottle godard, church-key vexillologist 8-bit hell of small batch hoodie pabst williamsburg fam keffiyeh mlkshk."},
@@ -16,8 +16,4 @@ posts = Post.create([
 ])
 
 
-comments = Comment.create([
-  {name: "Horg Lycanthropolyp", body: "Nice post!"  },
-  {name: "Etheline Methyline",  body: "love it!"},
-  {name: "Alistair M. Brungus", body: "Wonderful!"}
-])
+
