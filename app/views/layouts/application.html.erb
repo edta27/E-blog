@@ -3,6 +3,8 @@
 <html>
 <head>
   <title>Blog</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -10,6 +12,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'shared/navbar' %>
+
   <div id="sidebar">
 
     <div id="logo">
@@ -18,16 +22,20 @@
       <% end %>
     </div>
 
-    <ul>
+    <!-- <ul>
       <li class="category">E</li>
       <li><%= link_to "Blog", root_path %></li>
       <li><%= link_to "About", about_path %></li>
-    </ul>
+    </ul> -->
+      <div class="jumbotron">
+        <h1>Hello World!</h1>
+        <p class="lead">Welcome to "The" blog for evangelist</p>
 
+      </div>
 
    <!-- dont show signed in admin when login -->
     <% if !user_signed_in? %>
-      <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
+      <p class="sign_in"><%= link_to "", new_user_session_path %></p>
     <% end %>
   </div>
 
@@ -35,7 +43,7 @@
     <div id="header">
       <!-- show current page if all posts when signed in -->
       <% if current_page?(root_path) %>
-        <p>All Posts</p>
+      <!--   <p>All Posts</p> -->
       <% elsif current_page?(about_path) %>
         <p>About</p>
       <% else %>

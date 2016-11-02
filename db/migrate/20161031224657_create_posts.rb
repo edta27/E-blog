@@ -6,5 +6,8 @@ class CreatePosts < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+
+  def self.down
+    remove_attachment :posts, :image
   end
 end
