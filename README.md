@@ -76,7 +76,7 @@ config.assets.compile = true
 I was not able to upload the background photo and I found out you have to add the two config to production.rb on stack
 <http://stackoverflow.com/questions/18324063/rails-4-images-not-loading-on-heroku>
 
-![alt text](http://www.nges-mumbai.org/AboutUs/SpecialThanks/images/fraction-slider/base_3.jpg)
+![alt text](http://www.koga-records.net/pic/jacket/gdr/ca89.jpg)
 
 ###Special Thanks:
 
