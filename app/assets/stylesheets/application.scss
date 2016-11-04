@@ -23,3 +23,22 @@ html, body {
   font-family: 'Roboto Slab', serif;
 }
 
+body {
+
+  background-image: url("onefamily.jpeg");
+  background-size: cover;
+  // background-color: honeydew;
+
+
+}
+
+
+#profile_image {
+      width: 300px;
+      float: left;
+      margin-right: 2em;
+      img {
+        width: 100%;
+        border-radius: 0.35em;
+      }
+    }
